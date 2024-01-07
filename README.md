@@ -1,6 +1,6 @@
 # BetterBoxd
 
-## Group members:
+## Contributors
 - Faisal Hossain
 - Lucas Ion
 - Michele Esercitato
