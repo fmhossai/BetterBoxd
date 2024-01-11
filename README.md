@@ -20,3 +20,7 @@ create notes of each movie.
 One way to run this application is using docker
 1. docker build -t BetterBoxd .
 2. docker run BetterBoxd
+
+## Thanks
+1. [Trakt](https://trakt.tv) for providing the movies API
+2. [Fanart](https://fanart.tv) for providing the artwork for the movie
