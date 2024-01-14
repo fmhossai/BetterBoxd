@@ -6,10 +6,11 @@ const { send } = require('express/lib/response');
 const fetchData = require('../fetchData');
 const router = express.Router();
 
-router.get('/get-all-movie-lists', async(req, res) => {
+router.get('/get-all-movie-lists', async (req, res) => {
     const data = await DBqueries.getMovieLists();
     res.send(data);
-})
+});
+
 router.post('/post-journal-entry', async (req, res) => {
     console.log(req.body);
     const data = await DBqueries.postJournalEntry(req.body);
@@ -77,13 +78,9 @@ router.get('/get-movie-page', async (req, res) => {
     res.send(data);
 });
 
-router.get('/get-most-watched-movies', async(req, res) => {
-    const data = await fetchData.getMostWatchedMovies("weekly");
+router.get('/get-most-watched-movies', async (req, res) => {
+    const data = await fetchData.getMostWatchedMovies('weekly');
     res.send(data);
-})
-
-
-
-
+});
 
 module.exports = router;

@@ -1,22 +1,8 @@
-FROM node:alpine
-
-# model
-WORKDIR /app/model
-
-COPY ./model/package.json .
-RUN npm install
-COPY ./model .
-
-# controller
-WORKDIR /app/controller
-
-COPY ./controller/package.json .
-RUN npm install
-COPY ./controller .
-
+FROM node
 
 WORKDIR /app
-COPY ./package.json .
-RUN npm install
+COPY . /app
 
-CMD ["npm", "start"]
+RUN npm run build
+
+CMD ["npm", "run", "start"]

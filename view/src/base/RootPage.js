@@ -1,4 +1,5 @@
 import NavBar from './NavBar.js';
+import Footer from './Footer.js';
 import JournalPage from '../journal/JournalPage';
 import MoviePage from '../movie/MoviePage';
 import HomePage from '../home/HomePage';
@@ -90,6 +91,7 @@ const RootPage = () => {
                     )}
                 </>
             )}
+            <Footer />
         </div>
     );
 };

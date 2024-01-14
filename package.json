@@ -4,13 +4,12 @@
     "description": "movie review web app that utilizes LetterBoxd API",
     "main": "app.js",
     "scripts": {
-        "model": "cd model && npm start",
-        "controller": "cd controller && npm start",
-        "start": "concurrently \"npm run model\" \"npm run controller\""
+        "build-controller": "cd controller && npm install",
+        "build-model": "cd model && npm install",
+        "build-view": "cd view && npm install && npm run build",
+        "build": "npm run build-controller && npm run build-model && npm run build-view",
+        "start": "cd controller && npm start"
     },
     "authors": "Mik-Ese, fmhossai, ethangillengg, cheyennegoh, Arne-Hilao, maxbotham, Lucas",
-    "license": "",
-    "dependencies": {
-        "concurrently": "^7.0.0"
-    }
+    "license": ""
 }
